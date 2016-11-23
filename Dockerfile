@@ -10,7 +10,8 @@ RUN \
   && apt-get update \
   && apt-get -y --force-yes --no-install-recommends --fix-missing install python-pip python-psycopg2  python-yaml libgeos-c1 libxml2-dev build-essential gcc python-dev libblas-dev liblapack-dev libatlas-base-dev gfortran \
   && apt-get -y install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose curl \
-  && apt-get -y upgrade \
+  && apt-get update \
+  && apt-get -y dist-upgrade \
   && curl -o gosu -fsSL "$GOSU_DOWNLOAD_URL" > /tmp/gosu \
   && mv /tmp/gosu /usr/bin/gosu \
   && chmod +x /usr/bin/gosu \
