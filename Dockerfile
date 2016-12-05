@@ -17,6 +17,7 @@ RUN \
   && chmod +x /usr/bin/gosu \
   && pip install --upgrade pip \
   && pip install simplekml flask reverse_geocoder python-dateutil uwsgi \
+  && pip install --upgrade raven \
   && apt-get -y remove python-dev build-essential gcc gfortran \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
