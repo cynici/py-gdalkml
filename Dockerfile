@@ -21,3 +21,5 @@ RUN \
   && apt-get -y remove python-dev build-essential gcc gfortran \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ADD docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod 755 /docker-entrypoint.sh
