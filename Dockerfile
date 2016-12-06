@@ -12,7 +12,7 @@ RUN \
   && apt-get -y install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose curl \
   && apt-get update \
   && apt-get -y dist-upgrade \
-  && curl -o gosu -fsSL "$GOSU_DOWNLOAD_URL" > /tmp/gosu \
+  && curl -o /tmp/gosu -kfsSL "$GOSU_DOWNLOAD_URL" \
   && mv /tmp/gosu /usr/bin/gosu \
   && chmod +x /usr/bin/gosu \
   && pip install --upgrade pip \
